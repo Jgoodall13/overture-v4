@@ -1,9 +1,12 @@
 {
-  "name": "heroku-test",
+  "name": "overture-site",
   "version": "1.0.0",
   "description": "Overture Site",
   "author": {
     "name": "Jacob Goodall"
+  },
+  "engines": {
+    "node": "8.9.4"
   },
   "license": "MIT",
   "scripts": {
