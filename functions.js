@@ -54,31 +54,3 @@ exports.contactEmail = (name, company, email, phone, message) => {
       }
     });
   };
-
-//   const transporter = nodemailer.createTransport({
-    // host: 'smtp.ethereal.email',
-    // port: 587,
-    // auth: {
-    //     user: 'l4ulcdjrietnchxt@ethereal.email',
-    //     pass: 'vKRrRj9Jdj63BsUR5c'
-    // }
-// });
-
-
-  // service: 'gmail',
-  // auth: {
-  //   user: auth.USERNAME,
-  //   pass: auth.PASSWORD
-  // }
-
-  // host: 'mail.overturepromo.com',
-  // port: 25,
-  // secure: false,
-  // ignoreTLS: true
-
-  // attachments: [
-  //   {   // file on disk as an attachment
-  //     filename: 'beer.jpg',
-  //     path: './beer.jpg' // stream this file
-  //   },
-  // ]  
