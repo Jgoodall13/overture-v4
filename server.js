@@ -9,13 +9,13 @@ const fn = require("./functions.js");
 const knox = require('knox');
 const awsS3Url = "https://s3.amazonaws.com/overture-corporate-site-resumes/";
 const fs = require('fs');
+const secrets = require('./secrets.json');
 
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
 const port = process.env.PORT || 5000;
-
 
 
 //Upload Storage function
@@ -35,8 +35,8 @@ const upload = multer({
 
 //amazon s3 bucket storage
 const client = knox.createClient({
-  key: process.env.AWS_KEY,
-  secret: process.env.AWS_SECRET,
+  key: process.env.AWS_KEY || secrets.aws_key,
+  secret: process.env.AWS_SECRET || secrets.aws_secret,
   bucket: 'overture-corporate-site-resumes'
 });
 
@@ -46,10 +46,8 @@ const client = knox.createClient({
 //api calls
 app.post('/contact', (req, res) => {
   res.send();
-  fn.contactEmail(req.body.name, req.body.company, req.body.email, req.body.phone, req.body.message).catch((err) => {
-    console.log(err);
-    //Right here we will want to be able to send an email to me of what the actual error was via nodmailer with my email
-  }); 
+  fn.contactEmail(req.body.name, req.body.company, req.body.email, req.body.phone, req.body.message);
+  //should make a catch for errors and send an email if emails are not going through.
 })
 
 app.post('/apply', upload.single('selectedFile'), (req, res) => {

@@ -1,11 +1,12 @@
 var nodemailer = require('nodemailer');
+const secrets = require('./secrets.json'); 
 
 exports.contactEmail = (name, company, email, phone, message) => {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS
+        user: process.env.MAIL_USER || secrets.mail_user,
+        pass: process.env.MAIL_PASS || secrets.mail_pass
       }
     });
     var mailOptions = {
@@ -27,8 +28,8 @@ exports.contactEmail = (name, company, email, phone, message) => {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS
+        user: process.env.MAIL_USER || secrets.mail_user,
+        pass: process.env.MAIL_PASS || secrets.mail_pass
       }
     });
     var mailOptions = {

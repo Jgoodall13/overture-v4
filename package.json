@@ -5,9 +5,6 @@
   "author": {
     "name": "Jacob Goodall"
   },
-  "engines": {
-    "node": "8.9.4"
-  },
   "license": "MIT",
   "scripts": {
     "client": "cd client && yarn start",
