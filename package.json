@@ -2,9 +2,6 @@
   "name": "heroku-test",
   "version": "1.0.0",
   "description": "Overture Site",
-  "engines": {
-    "node": "8.9.4"
-  },
   "author": {
     "name": "Jacob Goodall"
   },

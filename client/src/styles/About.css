@@ -118,6 +118,28 @@ ul{
     font-family: Proxima-bold;
 }
 
+.thin-orange-words{
+    color: #ef7521;
+    font-size: 45px;
+    font-family: Proxima;
+}
+
+.where-we-work{
+    background-image: url('../images/about/wherewework.jpg');
+    background-size: cover;
+    height: 485px;
+    position: relative;
+}
+
+.where-box{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.7)
+}
+
 .company-stores{
     margin-top: 150px;
 }
@@ -191,6 +213,12 @@ ul{
         transform: translateX(-50%);
         width: 78%;
     }
+    .where-box{
+        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 87%;
+    }
     .company-stores {
         margin-top: 25px;
     }
@@ -244,6 +272,9 @@ ul{
     }
     .about-orange-words{
         font-size: 32px;
+    }
+    .thin-orange-words{
+        font-size: 24px;
     }
     .mobile-abstract{
         display: block;
